@@ -20,7 +20,11 @@ class AchievementItemData {
   /// On iOS/macOS [totalSteps] will always be 100.
   final int totalSteps;
 
+  /// Whether or not the achievement has been unlocked.
   final bool unlocked;
+
+  /// Whether or not the achievement is visible to the player.
+  final bool hidden;
 
   const AchievementItemData({
     required this.id,
@@ -31,6 +35,7 @@ class AchievementItemData {
     required this.completedSteps,
     required this.totalSteps,
     required this.unlocked,
+    required this.hidden,
   });
 
   factory AchievementItemData.fromJson(Map<String, dynamic> json) {
@@ -43,6 +48,7 @@ class AchievementItemData {
       totalSteps: json["totalSteps"],
       completedSteps: json["completedSteps"],
       unlocked: json["unlocked"],
+      hidden: json["hidden"],
     );
   }
 }

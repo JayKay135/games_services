@@ -101,6 +101,7 @@ class Achievements(private var activityPluginBinding: ActivityPluginBinding) {
                 if (item.type == Achievement.TYPE_INCREMENTAL) item.currentSteps else 0,
                 if (item.type == Achievement.TYPE_INCREMENTAL) item.totalSteps else 0,
                 item.state == Achievement.STATE_UNLOCKED,
+                item.state == Achievement.STATE_HIDDEN,
               )
             )
           }

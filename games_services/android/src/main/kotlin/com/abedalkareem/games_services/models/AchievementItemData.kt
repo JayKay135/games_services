@@ -9,4 +9,5 @@ data class AchievementItemData(
   val completedSteps: Int,
   val totalSteps: Int,
   val unlocked: Boolean,
+  val hidden: Boolean,
 )
